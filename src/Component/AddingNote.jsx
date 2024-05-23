@@ -21,7 +21,7 @@ const AddingNote = () => {
     }
     ctx.addData(obj);
     setTitle("");
-    setTitle("")
+    setDesc("")
   
   }
   return (

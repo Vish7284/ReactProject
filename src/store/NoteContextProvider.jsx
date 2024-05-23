@@ -7,7 +7,7 @@ const NoteContextProvider = (props) => {
 
 
   useEffect(() => {
-    // Fetch data from Firebase when the component mounts
+    // Fetching the  data from Firebase when the component mounts
     fetch("https://ecommcontactus-default-rtdb.firebaseio.com/AddedNotes.json")
       .then((response) => {
         if (!response.ok) {
@@ -22,6 +22,7 @@ const NoteContextProvider = (props) => {
       })
       .catch((error) => console.log(error));
   }, []); 
+  
   const OnAddNotes = (data) => {
     const updatedNotes =  [...notes, {...data}];
     setNotes(updatedNotes)
@@ -47,7 +48,7 @@ const NoteContextProvider = (props) => {
         }
       })
       .then((dat) => {
-        console.log(data.notesAdded);
+        console.log(dat.notesAdded);
       })
       .catch((err) => console.log(err));
   };
